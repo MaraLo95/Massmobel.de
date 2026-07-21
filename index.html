@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>massmöbelwerk. — Möbel nach Maß</title>
+  <meta name="description" content="Möbelbau nach Maß — Küchen, Ankleiden, Büros und Unikate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Fixed chrome -->
+  <header class="site-header">
+    <button class="icon-btn" id="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+    <a href="#home" class="logo" data-nav="home">massmöbelwerk<span>.</span></a>
+  </header>
+
+  <aside class="social-rail" aria-label="Soziale Netzwerke">
+    <span>Folgt uns</span>
+    <a href="#" aria-label="Facebook">Fb.</a>
+    <a href="#" aria-label="Instagram">Ig.</a>
+    <a href="#" aria-label="Pinterest">Pt.</a>
+  </aside>
+
+  <button class="icon-btn search-btn" id="search-toggle" aria-label="Suche">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <circle cx="11" cy="11" r="7" />
+      <path d="M20 20l-3.5-3.5" />
+    </svg>
+  </button>
+
+  <!-- Full-screen menu -->
+  <nav class="overlay-menu" id="overlay-menu" aria-hidden="true">
+    <ul>
+      <li><a href="#home" data-nav="home">Startseite<span>.</span></a></li>
+      <li><a href="#about" data-nav="about">Über uns<span>.</span></a></li>
+      <li><a href="#services" data-nav="services">Leistungen<span>.</span></a></li>
+      <li><a href="#contact" data-nav="contact">Kontakt<span>.</span></a></li>
+    </ul>
+    <p class="menu-tagline">Möbel, die dem Raum folgen — und Ihnen.</p>
+  </nav>
+
+  <!-- Search overlay -->
+  <div class="search-overlay" id="search-overlay" aria-hidden="true">
+    <form class="search-form" role="search">
+      <input type="search" id="search-input" placeholder="Projekte durchsuchen…" autocomplete="off" />
+      <button type="button" class="icon-btn" id="search-close" aria-label="Suche schließen">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+    </form>
+    <ul class="search-results" id="search-results"></ul>
+  </div>
+
+  <!-- HOME: interactive portfolio -->
+  <main id="home" class="view view-home is-active">
+    <div class="portfolio-bg" id="portfolio-bg" aria-hidden="true"></div>
+    <div class="portfolio-veil" aria-hidden="true"></div>
+
+    <div class="portfolio-list-wrap">
+      <ul class="portfolio-list" id="portfolio-list"></ul>
+    </div>
+  </main>
+
+  <!-- Project detail overlay -->
+  <section class="project-panel" id="project-panel" aria-hidden="true">
+    <button class="icon-btn panel-close" id="panel-close" aria-label="Projekt schließen">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <path d="M6 6l12 12M18 6L6 18" />
+      </svg>
+    </button>
+    <div class="project-panel-media">
+      <img id="panel-image" src="" alt="" />
+    </div>
+    <div class="project-panel-copy">
+      <p class="panel-cat" id="panel-cat"></p>
+      <h2 id="panel-title"></h2>
+      <p id="panel-desc"></p>
+      <a href="#contact" class="panel-cta" data-nav="contact">Angebot anfragen →</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="view view-about">
+    <div class="about-layout">
+      <div class="about-visual">
+        <img src="kitchen.png" alt="Küche nach Maß" />
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">Studio</p>
+        <h1>Wir bauen Raum<br />um das Leben herum.</h1>
+        <p>
+          massmöbelwerk. ist ein Studio für Möbelbau nach Maß — von Küchen und Ankleiden
+          bis zu Büros und Unikaten. Jedes Projekt beginnt mit dem Maß des Raums
+          und endet mit einem Detail, das man spüren kann.
+        </p>
+        <p>
+          Wir arbeiten mit natürlichen Materialien, präziser Schreinerei und einem Design,
+          das nicht schreit — sondern bleibt.
+        </p>
+        <dl class="stats">
+          <div>
+            <dt>Fokus</dt>
+            <dd>Küchen · Ankleiden · Büros</dd>
+          </div>
+          <div>
+            <dt>Ablauf</dt>
+            <dd>Maß → Entwurf → Fertigung → Montage</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="view view-services">
+    <div class="services-layout">
+      <header class="services-intro">
+        <p class="eyebrow">Leistungen</p>
+        <h1>Vom ersten Maß<br />bis zur Montage.</h1>
+        <p>Alles aus einer Hand — Planung, Fertigung und Einbau für Möbel, die exakt passen.</p>
+      </header>
+      <ul class="services-grid">
+        <li>
+          <span class="service-num">01</span>
+          <h2>Küchen nach Maß</h2>
+          <p>Handleless Fronten, integrierte Beleuchtung und Arbeitsflächen — geplant für Ihren Alltag.</p>
+        </li>
+        <li>
+          <span class="service-num">02</span>
+          <h2>Ankleiden &amp; Schränke</h2>
+          <p>Walk-in-Lösungen und Einbauschränke vom Boden bis zur Decke — Ordnung mit Charakter.</p>
+        </li>
+        <li>
+          <span class="service-num">03</span>
+          <h2>Büro &amp; Praxis</h2>
+          <p>Bibliotheken, Schreibtische und Wandmöbel für Räume, in denen man fokussiert arbeiten will.</p>
+        </li>
+        <li>
+          <span class="service-num">04</span>
+          <h2>Unikate</h2>
+          <p>Einzelstücke wie Tische und Regale — Form, Material und Maß genau nach Ihren Vorstellungen.</p>
+        </li>
+        <li>
+          <span class="service-num">05</span>
+          <h2>Beratung &amp; Planung</h2>
+          <p>Aufmaß vor Ort, 3D-Entwurf und Materialberatung — transparent und verbindlich.</p>
+        </li>
+        <li>
+          <span class="service-num">06</span>
+          <h2>Fertigung &amp; Montage</h2>
+          <p>Fertigung in unserer Werkstatt, präzise Montage vor Ort — fertig zum Einziehen.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="view view-contact">
+    <div class="contact-layout">
+      <div class="contact-intro">
+        <p class="eyebrow">Kontakt</p>
+        <h1>Erzählen Sie uns,<br />was Sie sich vorstellen.</h1>
+        <p>Wir melden uns innerhalb von 24 Stunden. Kostenlose Erstberatung für neue Projekte.</p>
+        <ul class="contact-meta">
+          <li><a href="mailto:info@massmoebelwerk.com">info@massmoebelwerk.com</a></li>
+          <li><a href="tel:+4915112345678">+49 151 1234 5678</a></li>
+          <li>München · Deutschland</li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contact-form">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required placeholder="Ihr Name" />
+        </label>
+        <label>
+          <span>E-Mail</span>
+          <input type="email" name="email" required placeholder="ihre@email.de" />
+        </label>
+        <label>
+          <span>Projektart</span>
+          <select name="type">
+            <option>Küche</option>
+            <option>Ankleide</option>
+            <option>Büro</option>
+            <option>Sonstiges</option>
+          </select>
+        </label>
+        <label class="full">
+          <span>Nachricht</span>
+          <textarea name="message" rows="4" required placeholder="Maße, Stil, Zeitrahmen…"></textarea>
+        </label>
+        <button type="submit" class="submit-btn">Anfrage senden</button>
+        <p class="form-note" id="form-note" hidden>Danke — wir melden uns bald.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© massmöbelwerk <span id="year"></span></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
